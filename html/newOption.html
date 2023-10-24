@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="../js/index.js"></script>
+</head>
+<body>
+  <div class='ui modal newOptionDis'>
+    <div class="row inBox absolute modalTL">
+      <div class="column">
+        <div class="ui segments no-padding">
+          <div class="ui segment no-padding-bottom inverted greyli">
+            <i class="ui left corner label teal">
+              <i class="edit icon"></i>
+            </i>
+            <h5 class="ui left floated header marginLeftTwo">
+              신규옵션
+              <span class='reds'>
+                *
+                <span class='redsDefault'>필수항목입니다.</span>
+                </span>
+            </h5>
+            <div class="clearfix"></div>
+          </div>
+          <div class="ui segment form">
+            <div id="chart-curved-line" class="flot-chart">
+
+              <div class="field">
+                <label>옵션명<span class='reds'>*</span></label>
+                <input placeholder="옵션명" name="optionName" type="text" />
+              </div>
+
+
+              <div class="inline fields">
+                <label>옵션선택 여부<span class='reds'>*</span></label>
+                <label class='disA'>선택</label>
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" name="a4" class='optionSelect' />
+                  <label class="coloring positive"></label>
+                </div>
+                <label class='disB dis'>필수</label>
+              </div>
+              <div class="inline fields">
+                <label>옵션사용 여부</label>
+                <label class='disA'>미사용</label>
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" name="a4" class='optionUse' />
+                  <label class="coloring positive"></label>
+                </div>
+                <label class='disB dis'>사용</label>
+              </div>
+
+              <div class="textAlign-right">
+                <button type='button' class="ui button negative newOptionBtn">
+                  <i class="undo icon"></i>취소</button>
+                <button type='button' class="ui button positive">
+                  <i class="check icon"></i>적용</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

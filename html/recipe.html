@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="../js/index.js"></script>
+</head>
+
+<body>
+  <div class='ui modal recipeDis'>
+    <div class='centered row'>
+      <div class="column ten wide">
+        <div class="ui segments no-padding">
+          <div class="ui segment no-padding-bottom inverted greyli">
+            <i class="ui left corner label teal">
+              <i class="edit icon"></i>
+            </i>
+            <h5 class="ui left floated header marginLeftTwo">
+              레시피 Recipe
+            </h5>
+            <div class="clearfix"></div>
+          </div>
+          <div class="ui segment form">
+            <div id="chart-curved-line" class="flot-chart gridHeight1 scroll">
+
+              <div class="field">
+                <label><i class="us flag"></i> United States of America</label>
+                <textarea placeholder="레시피" name="recipe_US"></textarea>
+              </div>
+
+              <div class="field">
+                <label><i class="kr flag"></i> 대한민국</label>
+                <textarea placeholder="레시피" name="recipe_KR"></textarea>
+              </div>
+
+              <div class="field">
+                <label><i class="cn flag"></i> 中國</label>
+                <textarea placeholder="레시피" name="recipe_CN"></textarea>
+              </div>
+
+              <div class="field">
+                <label><i class="jp flag"></i> 日本</label>
+                <textarea placeholder="레시피" name="recipe_JP"></textarea>
+              </div>
+
+              <div class="field">
+                <label><i class="es flag"></i>España</label>
+                <textarea placeholder="레시피" name="recipe_ES"></textarea>
+              </div>
+
+              <div class="field">
+                <label><i class="cz flag"></i>Česká republika</label>
+                <textarea placeholder="레시피" name="recipe_CZ"></textarea>
+              </div>
+
+              <div class="field">
+                <label><i class="pt flag"></i>Portugal</label>
+                <textarea placeholder="레시피" name="recipe_PT"></textarea>
+              </div>
+
+            </div>
+            <div class='field marginTop textAlign-right'>
+              <button type="button" class="negative ui button recipeBtn">
+                <i class="undo icon"></i>취소</button>
+              <button type="button" class="positive ui button">
+                <i class="check icon"></i>저장</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

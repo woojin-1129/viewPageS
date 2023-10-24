@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="../js/index.js"></script>
+</head>
+<body>
+  <div class='ui modal originDis'>
+    <div class="row inBox absolute modalTL">
+      <div class="column">
+        <div class="ui segments no-padding">
+          <div class="ui segment no-padding-bottom inverted greyli">
+          <i class="ui left corner label teal">
+              <i class="edit icon"></i>
+            </i>
+            <h5 class="ui left floated header marginLeftTwo">
+                원산지 Origin
+            </h5>
+            <div class="clearfix"></div>
+          </div>
+          <div class="ui segment form">
+              <div id="chart-curved-line" class="flot-chart">
+
+                <div class="field">
+                  <label><i class="us flag"></i> United States of America</label>
+                  <input placeholder="원산지" name="productOrigin_US" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="field">
+                  <label><i class="kr flag"></i> 대한민국</label>
+                  <input placeholder="원산지" name="productOrigin_KR" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="field">
+                  <label><i class="cn flag"></i> 中國</label>
+                  <input placeholder="원산지" name="productOrigin_CN" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="field">
+                  <label><i class="jp flag"></i> 日本</label>
+                  <input placeholder="원산지" name="productOrigin_JP" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="field">
+                  <label><i class="es flag"></i>España</label>
+                  <input placeholder="원산지" name="productOrigin_ES" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="field">
+                  <label><i class="cz flag"></i>Česká republika</label>
+                  <input placeholder="원산지" name="productOrigin_CZ" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="field">
+                  <label><i class="pt flag"></i>Portugal</label>
+                  <input placeholder="원산지" name="productOrigin_PT" type="text" autoComplete='off'/>
+                </div>
+
+                <div class="textAlign-right">
+                  <button type="button" class="negative ui button originBtn">
+                  <i class="undo icon"></i>취소</button>
+                  <button type="button" class="positive ui button">
+                  <i class="check icon"></i>저장</button>
+                </div>
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</body>
+</html>

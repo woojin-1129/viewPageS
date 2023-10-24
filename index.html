@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/test.css">
+</head>
+
+<body>
+  <form class="ui form">
+    <div id="contextWrap">
+      <div class="ui equal width left aligned padded grid stackable">
+        <div class="centered row">
+          <div class="column">
+            <div class="ui segments no-padding">
+              <div class="ui segment no-padding-bottom inverted greyli">
+
+                <div class="clearfix"></div>
+                <i class="ui grey ribbon label">
+                  <i class="image icon large"></i>
+                  <h5 class="ui right floated header white">이미지</h5>
+                </i>
+              </div>
+              <div class="ui segment">
+                <div id="chart-curved-line" class="flot-chart">
+
+                  <div class="bolck marginTop ui bottom attached warning fileZone">
+                    <button type='button' class="ui blue button imgBtn" onclick="imgClick">
+                      <i class="plus icon"></i>
+                      이미지 추가
+                    </button>
+                    <button type='button' class="ui blue button videoBtn">
+                      <i class="plus icon"></i>
+                      동영상 추가
+                    </button>
+                    <input type="file" name='imgFile' class='imgFile' accept='image/*' multiple hidden/>
+                    <input type="file" name='videoFile' class='videoFile' accept='video/*' multiple hidden/>
+                  </div>
+
+                  <div class='ui divider'></div>
+                  <div class='ui equal width left centered aligned padded grid stackable'>
+                    <div class='stretched centered row imgZone'>
+
+                      <div class='ui grid column fileInsert'>
+                        <div class='six column row contain'></div>
+                        <div class='six column row contain'></div>
+                        <div class='six column row contain'></div>
+                      </div>
+
+                      <div class="five wide column" draggable="false">
+                        <img class="ui fluid image rounded mainfile" draggable="false" src="/img/wireframe/image.png"
+                          alt="기본이미지" />
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="centered row">
+          <div class="column">
+            <div class="ui segments no-padding">
+              <div class="ui segment no-padding-bottom inverted greyli">
+                <div class="clearfix"></div>
+                <i class="ui red ribbon label">
+                  <i class="exclamation icon large"></i>
+                  <h5 class="ui right floated header white">
+                    필수입력사항
+                  </h5>
+                </i>
+              </div>
+              <div class='ui form segment'>
+                <div id="chart-curved-line" class="flot-chart">
+                  <div class="two fields">
+                    <div class="field">
+                      <label>메뉴코드</label>
+                      <input placeholder="메뉴코드" name="id_reg" class='readOnly' type="text" readOnly />
+                    </div>
+                    <div class="field">
+                      <label>카테고리코드</label>
+                      <input placeholder="카테고리코드" name="catId" class='readOnly' type="text" readOnly />
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="field">
+                      <label>메뉴명</label>
+                      <input placeholder="메뉴명" name="name" type="text" readOnly class='name' />
+                      <i class="us flag"></i>
+                      <i class="kr flag"></i>
+                      <i class="cn flag"></i>
+                      <i class="jp flag"></i>
+                      <i class="es flag"></i>
+                      <i class="cz flag"></i>
+                      <i class="pt flag"></i>
+                    </div>
+                    <div class="field">
+                      <label>메뉴명(단축명)</label>
+                      <input placeholder="메뉴명(단축명)" name="shortName" class='shortName' readOnly type="text" />
+                      <button type="button" class="ui teal tiny button"><i class="us flag"></i>English</button>
+                      <button type="button" class="ui teal tiny button"><i class="kr flag"></i>한국어</button>
+                      <button type="button" class="ui teal tiny button"><i class="cn flag"></i>简体</button>
+                      <button type="button" class="ui teal tiny button"><i class="jp flag"></i>日本语</button>
+                      <button type="button" class="ui teal tiny button"><i class="es flag"></i>Spanish</button>
+                      <button type="button" class="ui teal tiny button"><i class="cz flag"></i>Czech</button>
+                      <button type="button" class="ui teal tiny button"><i class="pt flag"></i>Portugal</button>
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="field">
+                      <label>등록구분</label>
+                      <div class="ui selection dropdown" tabIndex="0">
+                        <input type="hidden" name="isStore" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">등록구분</div>
+                        <div class="menu" tabIndex="-1">
+                          <div class="item" data-value="brand">브랜드</div>
+                          <div class="item" data-value="shop">매장</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label>상품구분</label>
+                      <div class="ui selection dropdown" tabIndex="0">
+                        <select name="itemTp" class='itemTp'>
+                          <option value="">상품구분</option>
+                          <option value="product">Product</option>
+                          <option value="productOption">Product(Option)</option>
+                          <option value="goods">Goods</option>
+                          <option value="etc">Etc</option>
+                        </select>
+                        <i class="dropdown icon"></i>
+                        <div class="default text">상품구분</div>
+                        <div class="menu" tabIndex="-1">
+                          <div class="item" data-value="product">Product</div>
+                          <div class="item" data-value="productOption">Product(Option)</div>
+                          <div class="item" data-value="goods">Goods</div>
+                          <div class="item" data-value="etc">Etc</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="field">
+                      <label>판매가격</label>
+                      <div class="ui left labeled fluid input">
+                        <div class="ui dropdown label" tabIndex="0">
+                          <div class="text"><i class="dollar sign icon"></i></div>
+                          <i class="dropdown icon"></i>
+                          <div class="menu" tabIndex="-1">
+                            <div class="item active selected"><i class="dollar sign icon"></i></div>
+                            <div class="item"><i class="euro sign icon"></i></div>
+                            <div class="item"><i class="won sign icon"></i></div>
+                            <div class="item"><i class="yen sign icon"></i></div>
+                          </div>
+                        </div>
+                        <input placeholder="판매가격" name="price" type="text" autoComplete='off' />
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label>판매구분</label>
+                      <div class="ui selection dropdown" tabIndex="0">
+                        <input type="hidden" name="salesClassification" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">판매구분</div>
+                        <div class="menu" tabIndex="-1">
+                          <div class="item" data-value="onSale">On sale</div>
+                          <div class="item" data-value="suspensionOfSale">Suspension of sale</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="field">
+                      <label>과세비율</label>
+                      <div class="ui right labeled fluid input">
+                        <input placeholder="과세비율" name="taxPer" class='taxPer' type="number" min="0"
+                          autoComplete='off' />
+                        <div class="ui basic label">
+                          <i class="percent icon"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label>과세구분</label>
+                      <div class="ui selection dropdown" tabIndex="0">
+                        <select name="taxClassification" class='taxClassification'>
+                          <option value="">과세구분</option>
+                          <option value="include">Include</option>
+                          <option value="separate">Separate</option>
+                          <option value="taxFree">Tax Free</option>
+                        </select>
+                        <i class="dropdown icon"></i>
+                        <div class="default text">과세구분</div>
+                        <div class="menu" tabIndex="-1">
+                          <div class="item" data-value="include">Include</div>
+                          <div class="item" data-value="separate">Separate</div>
+                          <div class="item" data-value="taxFree">Tax Free</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="centered row">
+          <div class="column">
+            <div class="ui segments no-padding">
+              <div class="ui segment no-padding-bottom inverted greyli">
+                <div class="clearfix"></div>
+                <i class="ui blue ribbon label">
+                  <i class="toggle on icon large"></i>
+                  <h5 class="ui right floated header white">
+                    기본입력사항
+                  </h5>
+                </i>
+              </div>
+              <div class="ui form segment">
+                <div id="chart-curved-line" class="flot-chart">
+                  <div class="two fields">
+                    <div class="inline fields">
+                      <label>알러지 여부</label>
+                      <label class='disA'>미사용</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="allergy" />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>사용</label>
+                    </div>
+                    <div class="inline fields">
+                      <label>비건 여부</label>
+                      <label class='disA'>미사용</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="be" />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>사용</label>
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="inline fields">
+                      <label>봉사료 구분</label>
+                      <label class='disA'>비적용</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="a4" />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>적용</label>
+                    </div>
+                    <div class="inline fields">
+                      <label>포장가능 여부</label>
+                      <label class='disA'>포장불가(홀식사)</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="a4" />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>포장가능</label>
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="inline fields">
+                      <label>리워드적립 여부</label>
+                      <label class='disA'>적립불가</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="a4" />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>적립대상</label>
+                    </div>
+
+                    <div class="inline fields">
+                      <label>모바일 아이콘</label>
+                      <div class="ui selection dropdown" tabIndex="0">
+                        <input type="hidden" name="mobileIcon" />
+                        <i class="dropdown icon"></i>
+                        <div class="default text">모바일 아이콘</div>
+                        <div class="menu transition hidden" tabIndex="-1">
+                          <div class="item" data-value="new">NEW</div>
+                          <div class="item" data-value="best">BEST</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="two fields">
+                    <div class="inline fields">
+                      <label>주방프린터출력</label>
+                      <label class='disA'>비출력</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="a4" />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>출력</label>
+                    </div>
+
+                    <div class="inline fields">
+                      <div class="field">
+                        <label>프린터번호</label>
+                        <input placeholder="프린터번호" name="printerSerial" class="marginLeft" type="text" />
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="two fields">
+                    <div class="inline fields">
+                      <label>재고관리 여부</label>
+                      <label class='disA'>미사용</label>
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" name="a4" class='safeStockCheckBox' />
+                        <label class="coloring positive"></label>
+                      </div>
+                      <label class='disB dis'>사용</label>
+                    </div>
+
+                    <div class="inline fields">
+                      <div class="field">
+                        <label>안전재고수량</label>
+                        <input placeholder="안전재고수량" name="safeStock" class="marginLeft readOnly safeStock" readOnly
+                          min="0" type="number" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inline fields">
+                    <div class="field">
+                      <label>판매기간</label>
+                      <input type="date" class="datedrop" placeholder="Search..." />
+                      <span>&emsp;~&emsp;</span>
+                      <input type="date" class="datedrop" placeholder="Search..." />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="centered row">
+          <div class="column">
+            <div class="ui segments no-padding">
+              <div class="ui segment no-padding-bottom inverted greyli">
+                <div class="clearfix"></div>
+                <i class="ui blue ribbon label">
+                  <i class="plus icon large"></i>
+                  <h5 class="ui right floated header white">
+                    추가입력사항
+                  </h5>
+                </i>
+              </div>
+              <div class="ui form segment">
+                <div id="chart-curved-line" class="flot-chart">
+
+                  <div class="field">
+                    <label>원산지</label>
+                    <input placeholder="원산지" name="origin" class='origin' type="text" readOnly />
+                    <i class="us flag"></i>
+                    <i class="kr flag"></i>
+                    <i class="cn flag"></i>
+                    <i class="jp flag"></i>
+                    <i class="es flag"></i>
+                    <i class="cz flag"></i>
+                    <i class="pt flag"></i>
+                  </div>
+
+                  <div class="field">
+                    <label>알러지</label>
+                    <input placeholder="알러지" name="allergy" class='allergy' type="text" readonly />
+                    <i class="us flag"></i>
+                    <i class="kr flag"></i>
+                    <i class="cn flag"></i>
+                    <i class="jp flag"></i>
+                    <i class="es flag"></i>
+                    <i class="cz flag"></i>
+                    <i class="pt flag"></i>
+                  </div>
+
+                  <div class="field">
+                    <label>레시피</label>
+                    <textarea placeholder='레시피' name='recipe' class='recipe' readonly></textarea>
+                    <i class="us flag"></i>
+                    <i class="kr flag"></i>
+                    <i class="cn flag"></i>
+                    <i class="jp flag"></i>
+                    <i class="es flag"></i>
+                    <i class="cz flag"></i>
+                    <i class="pt flag"></i>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="centered row optionZoneDis displaynone">
+          <div class="column">
+            <div class="ui segments no-padding">
+              <div class="ui segment no-padding-bottom greyli inverted">
+                <i class="ui blue ribbon label inline_bolck">
+                  <i class="cog icon large"></i>
+                  <h5 class="ui right floated header white">
+                    옵션
+                  </h5>
+                </i>
+                <div class="inline_bolck floatRight">
+                  <button type='button' class="ui small blue button newOption">
+                    <i class="plus icon"></i>
+                    신규옵션추가
+                  </button>
+                  <button type='button' class="ui small blue button option">
+                    <i class="plus icon"></i>
+                    옵션가져오기
+                  </button>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="ui segment form">
+                <div id="chart-curved-line" class="flot-chart">
+
+                  <div class="five fields textAlign-center">
+
+                    <div class="field">
+                      <label><i class="hashtag icon"></i></label>
+                    </div>
+                    <div class="field">
+                      <label>옵션명</label>
+                    </div>
+                    <div class="field">
+                      <label>선택구분</label>
+                    </div>
+                    <div class="field">
+                      <label>사용여부</label>
+                    </div>
+                    <div class="field">
+                      <label>관리</label>
+                    </div>
+
+                  </div>
+
+                  <div class="ui divider"></div>
+
+                  <div class="five fields textAlign-center">
+
+                    <div class="field">
+                      <label><i class="arrows alternate vertical icon yellow large cursor_pointer"></i></label>
+                    </div>
+                    <div class="field">
+                      <label><span class="font_medium">Size</span></label>
+                    </div>
+                    <div class="field">
+                      <label><span class="font_medium">선택</span></label>
+                    </div>
+                    <div class="field">
+                      <label><span class="font_medium">Y</span></label>
+                    </div>
+                    <div class="field">
+                      <button type="button" class="ui button blue optionManagement">
+                        <i class='pencil alternate icon'></i>관리</button>
+                      <button type="button" class="ui button negative">
+                        <i class='trash alternate icon'></i>삭제</button>
+                    </div>
+
+                  </div>
+
+                  <div class="five fields textAlign-center">
+
+                    <div class="field">
+                      <label><i class="arrows alternate vertical icon yellow large cursor_pointer"></i></label>
+                    </div>
+                    <div class="field">
+                      <label><span class="font_medium">ICE</span></label>
+                    </div>
+                    <div class="field">
+                      <label><span class="font_medium">선택</span></label>
+                    </div>
+                    <div class="field">
+                      <label><span class="font_medium">N</span></label>
+                    </div>
+                    <div class="field">
+                      <button type="button" class="ui button blue optionManagement">
+                        <i class='pencil alternate icon'></i>관리</button>
+                      <button type="button" class="ui button negative">
+                        <i class='trash alternate icon'></i>삭제</button>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="five fields textAlign-center">
+                  <div class="field"></div>
+                  <div class="field"></div>
+                  <div class="field"></div>
+                  <div class="field"></div>
+                  <div class="field">
+                    <button type='button' class='ui button blue'>순서변경저장</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="centered row">
+          <div class="column">
+            <div class="ui segments no-padding">
+              <div class="ui segment no-padding-bottom">
+                <div id="chart-curved-line" class="flot-chart textAlign-right button">
+                  <button type="button" class="negative ui button">
+                    <i class="window close icon"></i>취소</button>
+                  <button type="button" class="positive ui button">
+                    <i class="save icon"></i>저장</button>
+                </div>
+                <div class='datess'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="allergyss"></div>
+    <div class="menuss"></div>
+    <div class="menuCss"></div>
+    <div class="newOptionss"></div>
+    <div class="optionss"></div>
+    <div class="optionManagerss"></div>
+    <div class="originss"></div>
+    <div class="recipess"></div>
+  </form>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/file.js"></script>
+  <script>
+    	$(".allergyss").load("./html/allergy.html");
+	    $(".menuss").load("./html/menu.html");
+	    $(".menuCss").load("./html/menuC.html");
+	    $(".newOptionss").load("./html/newOption.html");
+	    $(".optionss").load("./html/option.html");
+	    $(".optionManagerss").load("./html/optionManager.html");
+	    $(".originss").load("./html/origin.html");
+	    $(".recipess").load("./html/recipe.html");
+  </script>
+</body>
+
+</html>
