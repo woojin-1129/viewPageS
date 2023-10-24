@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
 	$('.ui.dropdown').dropdown();
@@ -85,6 +86,7 @@ $(".originBtn").on("click", function () {
 })
 
 // 옵션에는 적용되나 모달에는 displaynone 적용안됨 리엑트에서는 적용됨
+// 동일한 파일내에 있어서 되는듯
 function optionZone(e) {
 	if (e.target.value.includes("Option")) {
 		$(".optionZoneDis").removeClass("displaynone");

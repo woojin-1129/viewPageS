@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/test.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/test.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                 <div id="chart-curved-line" class="flot-chart">
 
                   <div class="bolck marginTop ui bottom attached warning fileZone">
-                    <button type='button' class="ui blue button imgBtn" onclick="imgClick">
+                    <button type='button' class="ui blue button imgBtn">
                       <i class="plus icon"></i>
                       이미지 추가
                     </button>
@@ -37,8 +37,8 @@
                       <i class="plus icon"></i>
                       동영상 추가
                     </button>
-                    <input type="file" name='imgFile' class='imgFile' accept='image/*' multiple hidden/>
-                    <input type="file" name='videoFile' class='videoFile' accept='video/*' multiple hidden/>
+                    <input type="file" name='imgFile' class='imgFile' accept='image/*' multiple hidden />
+                    <input type="file" name='videoFile' class='videoFile' accept='video/*' multiple hidden />
                   </div>
 
                   <div class='ui divider'></div>
@@ -51,8 +51,8 @@
                         <div class='six column row contain'></div>
                       </div>
 
-                      <div class="five wide column" draggable="false">
-                        <img class="ui fluid image rounded mainfile" draggable="false" src="/img/wireframe/image.png"
+                      <div class="four wide column" draggable="false">
+                        <img class="ui fluid image rounded mainfile" draggable="false" src="img/wireframe/image.png"
                           alt="기본이미지" />
                       </div>
 
@@ -550,21 +550,20 @@
     <div class="recipess"></div>
   </form>
 
-
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-  <script src="/js/index.js"></script>
-  <script src="/js/file.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/file.js"></script>
   <script>
-    	$(".allergyss").load("./html/allergy.html");
-	    $(".menuss").load("./html/menu.html");
-	    $(".menuCss").load("./html/menuC.html");
-	    $(".newOptionss").load("./html/newOption.html");
-	    $(".optionss").load("./html/option.html");
-	    $(".optionManagerss").load("./html/optionManager.html");
-	    $(".originss").load("./html/origin.html");
-	    $(".recipess").load("./html/recipe.html");
+    $(".allergyss").load("html/allergy.html");
+    $(".menuss").load("html/menu.html");
+    $(".menuCss").load("html/menuC.html");
+    $(".newOptionss").load("html/newOption.html");
+    $(".optionss").load("html/option.html");
+    $(".optionManagerss").load("html/optionManager.html");
+    $(".originss").load("html/origin.html");
+    $(".recipess").load("html/recipe.html");
   </script>
 </body>
 

@@ -12,7 +12,6 @@ function videoClick() {
 
 
 function fileCk(type, e) {
-	console.log(1);
 	if (e.target.files.length > 18) {
 		alert("파일을 최대 18개 까지 등록가능합니다.")
 		return;
@@ -39,7 +38,7 @@ function fileCk(type, e) {
 				count++;
 			})
 		})
-		if ((count + e.target.files.length) > 18) {
+		if (((count-files.length) + e.target.files.length) > 18) {
 			alert("파일을 최대 18개 까지 등록가능합니다.")
 			return;
 		}
@@ -125,7 +124,7 @@ function dragEvent() { /* 드레그 & 드롭 이벤트 */
 
 							if(mainFile.tagName === "IMG") { // 메인 파일이 이미지인 경우
 								if (child === null) { // 첫번째 파일이 없으면 메인 파일을 기본으로 변경
-									mainFile.src = require("./img/wireframe/image.png");
+									mainFile.src = "./img/wireframe/image.png";
 								} else if(child.querySelector("img") !== null) { // 이미지 이미지
 									mainFile.src = child.querySelector("img").src; // 같을 경우 이미지만 첫번째 파일로 변경
 								} else if(child.querySelector("video") !== null) { // 이미지 비디오
@@ -146,7 +145,7 @@ function dragEvent() { /* 드레그 & 드롭 이벤트 */
 								if (child === null) { // 첫번째 파일이 없으면 비디오 파일을 지우도 이미지로 변경
 									mainFile.remove();
 									let img = document.createElement("img")
-									img.src = require("./img/wireframe/image.png");
+									img.src = "./img/wireframe/image.png";
 									img.classList.add("mainfile");
 									img.classList.add("ui");
 									img.classList.add("fluid");
@@ -181,6 +180,7 @@ function dragEvent() { /* 드레그 & 드롭 이벤트 */
 
 		draggable.addEventListener("dragend", () => { // 드래그 종료시 dragging 클래스 제거 및 3줄 정렬
 			draggable.classList.remove("dragging");
+			sort();
 		});
 	})
 

@@ -213,9 +213,13 @@ label {
 .dragging {
     opacity: 0;
 }
+.draggable {
+    min-height: 120px;
+    max-height: 120px;
+}
 .draggable img , .draggable video {
-    min-width: 100% !important;
-    min-height: 100%  !important;
+    width: 100% !important;
+    height: 100%  !important;
 }
 .noe {
     display: none !important;
