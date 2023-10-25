@@ -32,7 +32,7 @@
 }
 
 .BRI {
-    bottom: calc(1% + 10px);
+    bottom: calc(1%);
     right: calc(2% + 5px);
 }
 
@@ -205,10 +205,6 @@ label {
     border-right: 1px solid rgba(34,36,38,.15);
 }
 
-/* 드레그 */
-.dragging {
-    opacity: 0;
-}
 /* 드래그 사진 크기 */
 .draggable {
     height: 117px !important;
@@ -227,4 +223,10 @@ label {
 .flags {
     width: 20px;
     height: 20px;
+}
+.sortable-chosen {
+    opacity: 1;
+}
+.sortable-ghost {
+    opacity: 0;
 }

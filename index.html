@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>페이지</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/semantic.min.css">
+  <link rel="stylesheet" href="./_static/assets/css/semantic.min.css">
+  <link rel="stylesheet" href="./_static/assets/css/main.css">
+  <link rel="stylesheet" href="./_static/assets/css/sub.css">
+  <link rel="stylesheet" href="./_static/assets/css/datedropper.min.css">
 </head>
 
 <body>
@@ -46,11 +47,12 @@
                     <div class='centered row imgZone'>
 
                       <div class='ui grid column fileInsert'>
-                        <div class='six column row contain'></div>
+                        <div class='six column row'></div>
                       </div>
 
                       <div class="five wide column" draggable="false">
-                        <img class="ui image rounded mainfile" draggable="false" src="img/image.png" alt="기본이미지" />
+                        <img class="ui image rounded mainfile" draggable="false" src="./_static/assets/images/image.png"
+                          alt="기본이미지" />
                       </div>
 
                     </div>
@@ -91,13 +93,13 @@
                     <div class="field">
                       <label>메뉴명</label>
                       <input placeholder="메뉴명" name="name" type="text" readonly class='name marginBottom' />
-                      <img class="us flags" src="img/us.svg">
-                      <img class="kr flags" src="img/kr.svg">
-                      <img class="cn flags" src="img/cn.svg">
-                      <img class="jp flags" src="img/jp.svg">
-                      <img class="es flags" src="img/es.svg">
-                      <img class="cz flags" src="img/cz.svg">
-                      <img class="pt flags" src="img/pt.svg">
+                      <img class="us flags" src="./_static/assets/images/flags/US.svg">
+                      <img class="kr flags" src="./_static/assets/images/flags/KR.svg">
+                      <img class="cn flags" src="./_static/assets/images/flags/CN.svg">
+                      <img class="jp flags" src="./_static/assets/images/flags/JP.svg">
+                      <img class="es flags" src="./_static/assets/images/flags/ES.svg">
+                      <img class="cz flags" src="./_static/assets/images/flags/CZ.svg">
+                      <img class="pt flags" src="./_static/assets/images/flags/PT.svg">
                     </div>
                     <div class="field">
                       <label>메뉴명(단축명)</label>
@@ -344,9 +346,15 @@
                   <div class="inline fields">
                     <div class="field">
                       <label>판매기간</label>
-                      <input type="date" class="datedrop" placeholder="Search..." />
+                      <div class="ui input">
+                        <input type="text" class="datedrop" placeholder="Search..." data-large-mode="true"
+                          data-large-default="true" data-modal="false" data-translate-mode="true">
+                      </div>
                       <span>&emsp;~&emsp;</span>
-                      <input type="date" class="datedrop" placeholder="Search..." />
+                      <div class="ui input">
+                        <input type="text" class="datedrop" placeholder="Search..." data-large-mode="true"
+                          data-large-default="true" data-modal="false" data-translate-mode="true">
+                      </div>
                     </div>
                   </div>
 
@@ -374,37 +382,37 @@
                   <div class="field">
                     <label>원산지</label>
                     <input placeholder="원산지" name="origin" class='origin marginBottom' type="text" readonly />
-                    <img class="us flags" src="img/us.svg">
-                    <img class="kr flags" src="img/kr.svg">
-                    <img class="cn flags" src="img/cn.svg">
-                    <img class="jp flags" src="img/jp.svg">
-                    <img class="es flags" src="img/es.svg">
-                    <img class="cz flags" src="img/cz.svg">
-                    <img class="pt flags" src="img/pt.svg">
+                    <img class="us flags" src="./_static/assets/images/flags/US.svg">
+                    <img class="kr flags" src="./_static/assets/images/flags/KR.svg">
+                    <img class="cn flags" src="./_static/assets/images/flags/CN.svg">
+                    <img class="jp flags" src="./_static/assets/images/flags/JP.svg">
+                    <img class="es flags" src="./_static/assets/images/flags/ES.svg">
+                    <img class="cz flags" src="./_static/assets/images/flags/CZ.svg">
+                    <img class="pt flags" src="./_static/assets/images/flags/PT.svg">
                   </div>
 
                   <div class="field">
                     <label>알러지</label>
                     <input placeholder="알러지" name="allergy" class='allergy marginBottom' type="text" readonly />
-                    <img class="us flags" src="img/us.svg">
-                    <img class="kr flags" src="img/kr.svg">
-                    <img class="cn flags" src="img/cn.svg">
-                    <img class="jp flags" src="img/jp.svg">
-                    <img class="es flags" src="img/es.svg">
-                    <img class="cz flags" src="img/cz.svg">
-                    <img class="pt flags" src="img/pt.svg">
+                    <img class="us flags" src="./_static/assets/images/flags/US.svg">
+                    <img class="kr flags" src="./_static/assets/images/flags/KR.svg">
+                    <img class="cn flags" src="./_static/assets/images/flags/CN.svg">
+                    <img class="jp flags" src="./_static/assets/images/flags/JP.svg">
+                    <img class="es flags" src="./_static/assets/images/flags/ES.svg">
+                    <img class="cz flags" src="./_static/assets/images/flags/CZ.svg">
+                    <img class="pt flags" src="./_static/assets/images/flags/PT.svg">
                   </div>
 
                   <div class="field">
                     <label>레시피</label>
                     <textarea placeholder='레시피' name='recipe' class='recipe marginBottom' readonly></textarea>
-                    <img class="us flags" src="img/us.svg">
-                    <img class="kr flags" src="img/kr.svg">
-                    <img class="cn flags" src="img/cn.svg">
-                    <img class="jp flags" src="img/jp.svg">
-                    <img class="es flags" src="img/es.svg">
-                    <img class="cz flags" src="img/cz.svg">
-                    <img class="pt flags" src="img/pt.svg">
+                    <img class="us flags" src="./_static/assets/images/flags/US.svg">
+                    <img class="kr flags" src="./_static/assets/images/flags/KR.svg">
+                    <img class="cn flags" src="./_static/assets/images/flags/CN.svg">
+                    <img class="jp flags" src="./_static/assets/images/flags/JP.svg">
+                    <img class="es flags" src="./_static/assets/images/flags/ES.svg">
+                    <img class="cz flags" src="./_static/assets/images/flags/CZ.svg">
+                    <img class="pt flags" src="./_static/assets/images/flags/PT.svg">
                   </div>
 
                 </div>
@@ -461,52 +469,57 @@
 
                   <div class="ui divider"></div>
 
-                  <div class="five fields textAlign-center">
+                  <div class="dragZone">
 
-                    <div class="field">
-                      <label><i class="arrows alternate vertical icon yellow large cursor_pointer"></i></label>
-                    </div>
-                    <div class="field">
-                      <label><span class="font_medium">Size</span></label>
-                    </div>
-                    <div class="field">
-                      <label><span class="font_medium">선택</span></label>
-                    </div>
-                    <div class="field">
-                      <label><span class="font_medium">Y</span></label>
-                    </div>
-                    <div class="field">
-                      <button type="button" class="ui button blue optionManagement">
-                        <i class='pencil alternate icon'></i>관리</button>
-                      <button type="button" class="ui button negative">
-                        <i class='trash alternate icon'></i>삭제</button>
+                    <div class="five fields textAlign-center">
+
+                      <div class="field drag">
+                        <label><i class="arrows alternate vertical icon yellow large cursor_pointer"></i></label>
+                      </div>
+                      <div class="field">
+                        <label><span class="font_medium">Size</span></label>
+                      </div>
+                      <div class="field">
+                        <label><span class="font_medium">선택</span></label>
+                      </div>
+                      <div class="field">
+                        <label><span class="font_medium">Y</span></label>
+                      </div>
+                      <div class="field">
+                        <button type="button" class="ui button blue optionManagement">
+                          <i class='pencil alternate icon'></i>관리</button>
+                        <button type="button" class="ui button negative">
+                          <i class='trash alternate icon'></i>삭제</button>
+                      </div>
+
                     </div>
 
+                    <div class="five fields textAlign-center">
+
+                      <div class="field drag">
+                        <label><i class="arrows alternate vertical icon yellow large cursor_pointer"></i></label>
+                      </div>
+                      <div class="field">
+                        <label><span class="font_medium">ICE</span></label>
+                      </div>
+                      <div class="field">
+                        <label><span class="font_medium">선택</span></label>
+                      </div>
+                      <div class="field">
+                        <label><span class="font_medium">N</span></label>
+                      </div>
+                      <div class="field">
+                        <button type="button" class="ui button blue optionManagement">
+                          <i class='pencil alternate icon'></i>관리</button>
+                        <button type="button" class="ui button negative">
+                          <i class='trash alternate icon'></i>삭제</button>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="five fields textAlign-center">
-
-                    <div class="field">
-                      <label><i class="arrows alternate vertical icon yellow large cursor_pointer"></i></label>
-                    </div>
-                    <div class="field">
-                      <label><span class="font_medium">ICE</span></label>
-                    </div>
-                    <div class="field">
-                      <label><span class="font_medium">선택</span></label>
-                    </div>
-                    <div class="field">
-                      <label><span class="font_medium">N</span></label>
-                    </div>
-                    <div class="field">
-                      <button type="button" class="ui button blue optionManagement">
-                        <i class='pencil alternate icon'></i>관리</button>
-                      <button type="button" class="ui button negative">
-                        <i class='trash alternate icon'></i>삭제</button>
-                    </div>
-
-                  </div>
                 </div>
+
+
                 <div class="five fields textAlign-center">
                   <div class="field"></div>
                   <div class="field"></div>
@@ -549,35 +562,111 @@
 
   </form>
 
-  <script src="js/jquery-3.7.1.min.js"></script>
-  <script src="js/semantic.min.js"></script>
-  <script src="js/mustache.min.js"></script>
-  <script src="js/sortable.min.js"></script>
+  <script type="text/javascript" src="./_static/assets/js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="./_static/assets/js/semantic.min.js"></script>
+  <script type="text/javascript" src="./_static/assets/js/sortable.min.js"></script>
+  <script type="text/javascript" src="./_static/assets/js/datedropper.min.js"></script>
 
-  <script src="js/index.js"></script>
-  <script src="js/file.js"></script>
+  <script type="text/javascript" src="./_static/assets/plugins/mustache.min.js"></script>
+  <script type="text/javascript" src="./_static/assets/plugins/require.js"></script>
+
+  <script type="text/javascript" src="./_static/assets/js/index.js"></script>
+  <script type="text/javascript" src="./_static/assets/js/file.js"></script>
+
+
   <script>
-    $(".allergyss").load("./_static/assets/html/allergy.html");
-    $(".menuss").load("./_static/assets/html/menu.html");
-    $(".menuCss").load("./_static/assets/html/menuC.html");
-    $(".newOptionss").load("./_static/assets/html/newOption.html");
-    $(".optionss").load("./_static/assets/html/option.html");
-    $(".optionManagerss").load("./_static/assets/html/optionManager.html");
-    $(".originss").load("./_static/assets/html/origin.html");
-    $(".recipess").load("./_static/assets/html/recipe.html");
-    
-    setTimeout(function () {
-      console.log("3초가 지났습니다!");
+    $(".allergyss").load("./_static/templates/items/html/allergy.html");
+    $(".menuss").load("./_static/templates/items/html/menu.html");
+    $(".menuCss").load("./_static/templates/items/html/menuC.html");
+    $(".newOptionss").load("./_static/templates/items/html/newOption.html");
+    $(".optionss").load("./_static/templates/items/html/option.html");
+    $(".optionManagerss").load("./_static/templates/items/html/optionManager.html");
+    $(".originss").load("./_static/templates/items/html/origin.html");
+    $(".recipess").load("./_static/templates/items/html/recipe.html");
 
+    var locale = getCookie("BAK_ADMIN_LANG");
+    if (locale == undefined || locale == '') {
+      locale = 'en';
+    }
+
+    const myModule = require(['./_static/js/lang'],
+      function (lang) {
+        gLang = lang.getLang(locale);
+
+        console.log("myModule > gLang1 -->");
+        console.log(gLang);
+
+        return gLang;
+      });
+
+
+
+    function loadBaseCode(codeAlias, option) {
+      var data = {};
+
+      $.ajax({
+        url: './model/Codes',
+        method: 'POST',
+        async: false,
+        data: {
+          'codes': codeAlias
+        },
+        success: function (result) {
+          console.log("result --> ");
+          console.log(result);
+
+          if (result.success) {
+            console.log("loadBaseCode ok");
+          }
+          else {
+            console.log("loadBaseCode error");
+          }
+        }
+      });
+
+      return data;
+    }
+
+    function getCookie(name) {
+      var cookieName = name + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var cookieArray = decodedCookie.split(';');
+
+      for (var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(cookieName) === 0) {
+          return cookie.substring(cookieName.length, cookie.length);
+        }
+      }
+      return "";
+    }
+
+    console.log("loadBaseCode('ItemStatus', true) ==> ");
+    console.log(loadBaseCode('ItemStatus', true));
+
+    setTimeout(function () {
+      console.log(".allergyss");
       var htmlContent = $("#divAllergy");
-      console.log("html :" + htmlContent.html());
+      //console.log("html :" + htmlContent.html());  			
 
       var data = {
-        name: 'World'
+        name: '[World]'
       };
 
       $('#divAllergy').html(Mustache.to_html(htmlContent.html(), data));
-    }, 3000); // 3000 밀리초 = 3초
+
+      console.log("Lang : " + getCookie("BAK_ADMIN_LANG"));
+
+      //console.log("myModule > gLang2 -->");
+      //console.log(gLang);
+    }, 500);
+
+
+    console.log("myModule --> ");
+    console.log(myModule);
   </script>
 </body>
 

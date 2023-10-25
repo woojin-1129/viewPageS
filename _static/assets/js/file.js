@@ -164,7 +164,8 @@ function drag() {
 		new Sortable(row, {
 			group: "shared",
 			animation: 100,
-			ghostClass: "blue-background-class"
+			ghostClass: "sortable-ghost",  // Class name for the drop placeholder
+			chosenClass: "sortable-chosen",  // Class name for the chosen item
 		})
 	})
 }
@@ -233,7 +234,7 @@ function dragEvents() {
 
 							if (mainFile.tagName === "IMG") { // 메인 파일이 이미지인 경우
 								if (child === null) { // 첫번째 파일이 없으면 메인 파일을 기본으로 변경
-									mainFile.src = "./img/image.png";
+									mainFile.src = "/_static/assets/images/image.png";
 								} else if (child.querySelector("img") !== null) { // 이미지 이미지
 									mainFile.src = child.querySelector("img").src; // 같을 경우 이미지만 첫번째 파일로 변경
 								} else if (child.querySelector("video") !== null) { // 이미지 비디오
@@ -254,7 +255,7 @@ function dragEvents() {
 								if (child === null) { // 첫번째 파일이 없으면 비디오 파일을 지우도 이미지로 변경
 									mainFile.remove();
 									let img = document.createElement("img")
-									img.src = "./img/image.png";
+									img.src = "/_static/assets/images/image.png";
 									img.classList.add("mainfile");
 									img.classList.add("ui");
 									img.classList.add("fluid");

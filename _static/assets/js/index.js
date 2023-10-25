@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
-
 	$('.ui.dropdown').dropdown();
+	$('.datedrop').dateDropper();
 	$(".ui.toggle.checkbox input[type=checkbox]").on("change", function (e) {
 		let div = e.target.parentNode.parentNode;
 		if ($(this).is(':checked')) {
@@ -24,6 +24,7 @@ $(document).ready(function () {
 	$(".newOption").on("click", block.bind(false, "newOption"));
 	$(".optionManagement").on("click", block.bind(false, "optionManagement"));
 	$(".itemTp").on("change", optionZone.bind(true));
+	drags();
 })
 
 // 모달창
@@ -114,4 +115,17 @@ function taxFree(e) {
 
 function RegTest(e) {
 	e.target.value = e.target.value.replaceAll(/[ㄱ-ㅎㅏ-ㅣ가-힣]|\.{2}?/g, ""); ///
+}
+
+function drags() {
+	const rows = document.querySelectorAll(".dragZone");
+	rows.forEach((row) => {
+		new Sortable(row, {
+			group: "shared",
+			animation: 100,
+			handle: ".drag",
+			ghostClass: "sortable-ghost",  // Class name for the drop placeholder
+			chosenClass: "sortable-chosen",  // Class name for the chosen item
+		})
+	})
 }
