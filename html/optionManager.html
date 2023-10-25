@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script defer src="../js/index.js"></script>
+  <title>옵션관리</title>
+  <script src="./_static/assets/js/index.js"></script>
 </head>
 <body>
   <div class='ui modal optionManagementDis'>
-    <div class='row'>
-      <div class='ten wide column ui segment very padded center aligned gridHeight2 relative'>
-        <div class='ui'>
-          <div class="ui no-padding-bottom inverted greyli segment">
+    <div class='row inBox absolute'>
+      <div class='column'>
+        <div class='ui segments no-padding'>
+          <div class="ui segment no-padding-bottom inverted greyli">
             <i class="ui left corner label teal">
               <i class="cog icon"></i></i>
             <h5 class="ui left floated header marginLeftTwo">
@@ -19,99 +19,102 @@
             </h5>
             <div class="clearfix"></div>
           </div>
-          <div class='ui form'>
-
-            <div class="field textAlign-left">
-              <label>옵션명<span class='reds'>*</span></label>
-              <input placeholder="옵션명" name="optionName" type="text" />
-            </div>
-
-            <div class='two fields'>
-              <div class="inline fields">
-                <label>옵션선택 여부<span class='reds'>*</span></label>
-                <label class='disA'>선택</label>
-                <div class="ui toggle checkbox">
-                  <input type="checkbox" name="a4" class='optionSelect' />
-                  <label class="coloring positive"></label>
-                </div>
-                <label class='disB dis'>필수</label>
+          <div class='ui segment form gridHeight3'>
+            <div id="chart-curved-line" class="flot-chart">
+              <div class="field textAlign-left">
+                <label>옵션명<span class='reds'>*</span></label>
+                <input placeholder="옵션명" name="optionName" type="text" />
               </div>
-              <div class="inline fields">
-                <label>최대선택<span class='reds'>*</span></label>
-                <div class="ui selection dropdown" tabIndex="0">
-                  <select name="count" class='count'>
-                    <option value="">--선택--</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <i class="dropdown icon"></i>
-                  <div class="default text">--선택--</div>
-                  <div class="menu" tabIndex="-1">
-                    <div class="item" data-value="1">1</div>
-                    <div class="item" data-value="2">2</div>
-                    <div class="item" data-value="3">3</div>
-                    <div class="item" data-value="4">4</div>
-                    <div class="item" data-value="5">5</div>
+
+              <div class='two fields'>
+                <div class="inline fields">
+                  <label>옵션선택 여부<span class='reds'>*</span></label>
+                  <label class='disA'>선택</label>
+                  <div class="ui toggle checkbox">
+                    <input type="checkbox" name="a4" class='optionSelect' />
+                    <label class="coloring positive"></label>
+                  </div>
+                  <label class='disB dis'>필수</label>
+                </div>
+                <div class="inline fields">
+                  <label>최대선택<span class='reds'>*</span></label>
+                  <div class="ui selection dropdown" tabIndex="0">
+                    <select name="count" class='count'>
+                      <option value="">--선택--</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <i class="dropdown icon"></i>
+                    <div class="default text">--선택--</div>
+                    <div class="menu" tabIndex="-1">
+                      <div class="item" data-value="1">1</div>
+                      <div class="item" data-value="2">2</div>
+                      <div class="item" data-value="3">3</div>
+                      <div class="item" data-value="4">4</div>
+                      <div class="item" data-value="5">5</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class='two fields'>
-              <div class="inline fields">
-                <label>옵션사용 여부</label>
-                <label class='disA'>미사용</label>
-                <div class="ui toggle checkbox">
-                  <input type="checkbox" name="a4" class='optionUse' />
-                  <label class="coloring positive"></label>
+              <div class='two fields'>
+                <div class="inline fields">
+                  <label>옵션사용 여부</label>
+                  <label class='disA'>미사용</label>
+                  <div class="ui toggle checkbox">
+                    <input type="checkbox" name="a4" class='optionUse' />
+                    <label class="coloring positive"></label>
+                  </div>
+                  <label class='disB dis'>사용</label>
                 </div>
-                <label class='disB dis'>사용</label>
               </div>
-            </div>
 
-            <div class='ui divider'></div>
-
-            <div class='ui grid'>
-              <div class='four wide column'><label>옵션코드</label></div>
-              <div class='five wide column'><label>항목명</label></div>
-              <div class='four wide column'><label>추가요금</label></div>
-              <div class='three wide column'><label>삭제</label></div>
-            </div>
-
-            <div class='ui divider'></div>
-
-            <div class='scroll gridHeightForm'>
-
-              <div class='ui grid'>
-                <div class='four wide column'><input type='text' name='optionCode'></input></div>
-                <div class='five wide column'><input type='text' name='optionNames'></input></div>
-                <div class='four wide column'><input type='text' name='optionAmount'></input></div>
-                <div class='three wide column'><button type='button' class='ui button negative'><i class='icon minus'></i>삭제</button></div>
-              </div>
               <div class='ui divider'></div>
-              <div class='ui grid'>
-                <div class='four wide column'><input type='text' name='optionCode'></input></div>
-                <div class='five wide column'><input type='text' name='optionNames'></input></div>
-                <div class='four wide column'><input type='text' name='optionAmount'></input></div>
-                <div class='three wide column'><button type='button' class='ui button negative'><i class='icon minus'></i>삭제</button></div>
+
+              <div class='ui grid center aligned'>
+                <div class='four wide column'><label>옵션코드</label></div>
+                <div class='five wide column'><label>항목명</label></div>
+                <div class='four wide column'><label>추가요금</label></div>
+                <div class='three wide column'><label>삭제</label></div>
+              </div>
+
+              <div class='ui divider'></div>
+
+              <div class='scroll gridHeightForm'>
+
+                <div class='ui grid center aligned'>
+                  <div class='four wide column'><input type='text' name='optionCode'></input></div>
+                  <div class='five wide column'><input type='text' name='optionNames'></input></div>
+                  <div class='four wide column'><input type='text' name='optionAmount'></input></div>
+                  <div class='three wide column'><button type='button' class='ui button negative'><i
+                        class='icon minus'></i>삭제</button></div>
+                </div>
+                <div class='ui divider'></div>
+                <div class='ui grid center aligned'>
+                  <div class='four wide column'><input type='text' name='optionCode'></input></div>
+                  <div class='five wide column'><input type='text' name='optionNames'></input></div>
+                  <div class='four wide column'><input type='text' name='optionAmount'></input></div>
+                  <div class='three wide column'><button type='button' class='ui button negative'><i
+                        class='icon minus'></i>삭제</button></div>
+                </div>
+                <div class='ui divider'></div>
+              </div>
+
+              <div class='absolute RB'>
+                <button type='button' class="ui button negative optionManagementBtn">
+                  <i class="undo icon"></i>취소</button>
+                <button type='button' class="ui button positive">
+                  <i class="check icon"></i>적용</button>
               </div>
 
             </div>
           </div>
         </div>
-
-        <div class='absolute RB'>
-          <button type='button' class="ui button negative optionManagementBtn">
-            <i class="undo icon"></i>취소</button>
-          <button type='button' class="ui button positive">
-            <i class="check icon"></i>적용</button>
-        </div>
       </div>
     </div>
   </div>
-
 </body>
 </html>

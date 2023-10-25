@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+  <title>페이지</title>
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/semantic.min.css">
 </head>
 
 <body>
@@ -43,17 +43,14 @@
 
                   <div class='ui divider'></div>
                   <div class='ui equal width left centered aligned padded grid stackable'>
-                    <div class='stretched centered row imgZone'>
+                    <div class='centered row imgZone'>
 
                       <div class='ui grid column fileInsert'>
                         <div class='six column row contain'></div>
-                        <div class='six column row contain'></div>
-                        <div class='six column row contain'></div>
                       </div>
 
-                      <div class="four wide column" draggable="false">
-                        <img class="ui fluid image rounded mainfile" draggable="false" src="img/wireframe/image.png"
-                          alt="기본이미지" />
+                      <div class="five wide column" draggable="false">
+                        <img class="ui image rounded mainfile" draggable="false" src="img/image.png" alt="기본이미지" />
                       </div>
 
                     </div>
@@ -82,29 +79,30 @@
                   <div class="two fields">
                     <div class="field">
                       <label>메뉴코드</label>
-                      <input placeholder="메뉴코드" name="id_reg" class='readOnly' type="text" readOnly />
+                      <input placeholder="메뉴코드" name="id_reg" class='readOnly' type="text" readonly />
                     </div>
                     <div class="field">
                       <label>카테고리코드</label>
-                      <input placeholder="카테고리코드" name="catId" class='readOnly' type="text" readOnly />
+                      <input placeholder="카테고리코드" name="catId" class='readOnly' type="text" readonly />
                     </div>
                   </div>
 
                   <div class="two fields">
                     <div class="field">
                       <label>메뉴명</label>
-                      <input placeholder="메뉴명" name="name" type="text" readOnly class='name' />
-                      <i class="us flag"></i>
-                      <i class="kr flag"></i>
-                      <i class="cn flag"></i>
-                      <i class="jp flag"></i>
-                      <i class="es flag"></i>
-                      <i class="cz flag"></i>
-                      <i class="pt flag"></i>
+                      <input placeholder="메뉴명" name="name" type="text" readonly class='name marginBottom' />
+                      <img class="us flags" src="img/us.svg">
+                      <img class="kr flags" src="img/kr.svg">
+                      <img class="cn flags" src="img/cn.svg">
+                      <img class="jp flags" src="img/jp.svg">
+                      <img class="es flags" src="img/es.svg">
+                      <img class="cz flags" src="img/cz.svg">
+                      <img class="pt flags" src="img/pt.svg">
                     </div>
                     <div class="field">
                       <label>메뉴명(단축명)</label>
-                      <input placeholder="메뉴명(단축명)" name="shortName" class='shortName' readOnly type="text" />
+                      <input placeholder="메뉴명(단축명)" name="shortName" class='shortName marginBottom' readonly
+                        type="text" />
                       <button type="button" class="ui teal tiny button"><i class="us flag"></i>English</button>
                       <button type="button" class="ui teal tiny button"><i class="kr flag"></i>한국어</button>
                       <button type="button" class="ui teal tiny button"><i class="cn flag"></i>简体</button>
@@ -337,7 +335,7 @@
                     <div class="inline fields">
                       <div class="field">
                         <label>안전재고수량</label>
-                        <input placeholder="안전재고수량" name="safeStock" class="marginLeft readOnly safeStock" readOnly
+                        <input placeholder="안전재고수량" name="safeStock" class="marginLeft readOnly safeStock" readonly
                           min="0" type="number" />
                       </div>
                     </div>
@@ -375,38 +373,38 @@
 
                   <div class="field">
                     <label>원산지</label>
-                    <input placeholder="원산지" name="origin" class='origin' type="text" readOnly />
-                    <i class="us flag"></i>
-                    <i class="kr flag"></i>
-                    <i class="cn flag"></i>
-                    <i class="jp flag"></i>
-                    <i class="es flag"></i>
-                    <i class="cz flag"></i>
-                    <i class="pt flag"></i>
+                    <input placeholder="원산지" name="origin" class='origin marginBottom' type="text" readonly />
+                    <img class="us flags" src="img/us.svg">
+                    <img class="kr flags" src="img/kr.svg">
+                    <img class="cn flags" src="img/cn.svg">
+                    <img class="jp flags" src="img/jp.svg">
+                    <img class="es flags" src="img/es.svg">
+                    <img class="cz flags" src="img/cz.svg">
+                    <img class="pt flags" src="img/pt.svg">
                   </div>
 
                   <div class="field">
                     <label>알러지</label>
-                    <input placeholder="알러지" name="allergy" class='allergy' type="text" readonly />
-                    <i class="us flag"></i>
-                    <i class="kr flag"></i>
-                    <i class="cn flag"></i>
-                    <i class="jp flag"></i>
-                    <i class="es flag"></i>
-                    <i class="cz flag"></i>
-                    <i class="pt flag"></i>
+                    <input placeholder="알러지" name="allergy" class='allergy marginBottom' type="text" readonly />
+                    <img class="us flags" src="img/us.svg">
+                    <img class="kr flags" src="img/kr.svg">
+                    <img class="cn flags" src="img/cn.svg">
+                    <img class="jp flags" src="img/jp.svg">
+                    <img class="es flags" src="img/es.svg">
+                    <img class="cz flags" src="img/cz.svg">
+                    <img class="pt flags" src="img/pt.svg">
                   </div>
 
                   <div class="field">
                     <label>레시피</label>
-                    <textarea placeholder='레시피' name='recipe' class='recipe' readonly></textarea>
-                    <i class="us flag"></i>
-                    <i class="kr flag"></i>
-                    <i class="cn flag"></i>
-                    <i class="jp flag"></i>
-                    <i class="es flag"></i>
-                    <i class="cz flag"></i>
-                    <i class="pt flag"></i>
+                    <textarea placeholder='레시피' name='recipe' class='recipe marginBottom' readonly></textarea>
+                    <img class="us flags" src="img/us.svg">
+                    <img class="kr flags" src="img/kr.svg">
+                    <img class="cn flags" src="img/cn.svg">
+                    <img class="jp flags" src="img/jp.svg">
+                    <img class="es flags" src="img/es.svg">
+                    <img class="cz flags" src="img/cz.svg">
+                    <img class="pt flags" src="img/pt.svg">
                   </div>
 
                 </div>
@@ -415,11 +413,12 @@
           </div>
         </div>
 
+        <!-- 옵션 -->
         <div class="centered row optionZoneDis displaynone">
           <div class="column">
             <div class="ui segments no-padding">
               <div class="ui segment no-padding-bottom greyli inverted">
-                <i class="ui blue ribbon label inline_bolck">
+                <i class="ui blue ribbon label">
                   <i class="cog icon large"></i>
                   <h5 class="ui right floated header white">
                     옵션
@@ -532,7 +531,6 @@
                   <button type="button" class="positive ui button">
                     <i class="save icon"></i>저장</button>
                 </div>
-                <div class='datess'></div>
               </div>
             </div>
           </div>
@@ -540,7 +538,7 @@
       </div>
     </div>
 
-    <div class="allergyss"></div>
+    <div class="allergyss" id="divAllergy"></div>
     <div class="menuss"></div>
     <div class="menuCss"></div>
     <div class="newOptionss"></div>
@@ -548,22 +546,38 @@
     <div class="optionManagerss"></div>
     <div class="originss"></div>
     <div class="recipess"></div>
+
   </form>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/semantic.min.js"></script>
+  <script src="js/mustache.min.js"></script>
+  <script src="js/sortable.min.js"></script>
+
   <script src="js/index.js"></script>
   <script src="js/file.js"></script>
   <script>
-    $(".allergyss").load("html/allergy.html");
-    $(".menuss").load("html/menu.html");
-    $(".menuCss").load("html/menuC.html");
-    $(".newOptionss").load("html/newOption.html");
-    $(".optionss").load("html/option.html");
-    $(".optionManagerss").load("html/optionManager.html");
-    $(".originss").load("html/origin.html");
-    $(".recipess").load("html/recipe.html");
+    $(".allergyss").load("./_static/assets/html/allergy.html");
+    $(".menuss").load("./_static/assets/html/menu.html");
+    $(".menuCss").load("./_static/assets/html/menuC.html");
+    $(".newOptionss").load("./_static/assets/html/newOption.html");
+    $(".optionss").load("./_static/assets/html/option.html");
+    $(".optionManagerss").load("./_static/assets/html/optionManager.html");
+    $(".originss").load("./_static/assets/html/origin.html");
+    $(".recipess").load("./_static/assets/html/recipe.html");
+    
+    setTimeout(function () {
+      console.log("3초가 지났습니다!");
+
+      var htmlContent = $("#divAllergy");
+      console.log("html :" + htmlContent.html());
+
+      var data = {
+        name: 'World'
+      };
+
+      $('#divAllergy').html(Mustache.to_html(htmlContent.html(), data));
+    }, 3000); // 3000 밀리초 = 3초
   </script>
 </body>
 

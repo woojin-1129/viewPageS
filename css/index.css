@@ -1,0 +1,230 @@
+.absolute {
+    position: absolute;
+    z-index: 10 !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+/* 필수입력사항 */
+.reds {
+    display: inline-block;
+    color: red !important;
+    font-size: 14pt !important;
+    transform: translateY(3px) !important;
+}
+
+.redsDefault {
+    display: inline-block;
+    font-size: 10px !important;
+    transform: translateY(-5px) !important;
+}
+
+
+.inBox {
+    width: 100%;
+}
+
+.TL {/* 이미지 이동 화살표 */
+    top: calc(1% + 3px);
+    left: calc(1% + 4.5px);
+}
+
+.BRI {
+    bottom: calc(1% + 10px);
+    right: calc(2% + 5px);
+}
+
+.RB {
+    bottom: 10px;
+    right: 10px;
+}
+
+.marginRight {
+    margin-right: 20px !important;
+}
+
+.marginLeft {
+    margin-left: 5px !important;
+}
+
+.marginLeftTwo {
+    margin-left: 20px !important;
+}
+
+
+.marginTop {
+    margin-top: 5px !important;
+}
+.marginBottom {
+    margin-bottom: 5px !important;
+}
+
+.inline_bolck {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.textAlign-right {
+    text-align: right;
+}
+
+.textAlign-center {
+    text-align: center !important;
+}
+
+.textAlign-left {
+    text-align: left;
+}
+
+/* readonly 커서 변경 및 색상 */
+.form .readOnly {
+    background-color: #EEE !important;
+    cursor: not-allowed;
+}
+.form .readOnly:focus {
+    border: 1px solid rgba(34, 36, 38, .15) !important;
+}
+
+
+
+.cursor_pointer,
+.flag,
+.flags {
+    cursor: pointer;
+}
+
+/* 짧은 모달 창 센터 조정 */
+.modalCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 체크박스 라벨 간격조정 */
+.inline.fields>label:nth-child(1) {
+    width: 100px !important;
+    text-align: center;
+}
+.inline.fields>label:nth-child(2) {
+    font-size: 12px !important;
+    width: 100px !important;
+    text-align: center;
+}
+.inline.fields>label:nth-child(4) {
+    font-size: 12px !important;
+    width: 70px !important;
+    text-align: center;
+}
+.inline.fields>.field>label {
+    width: 100px !important;
+    text-align: center;
+}
+label {
+    /* 전체적인 폰트 사이즈 */
+    font-size: 13px !important;
+}
+/* 옵션 메인 폰트 */
+.font_medium {
+    font-size: 12pt;
+}
+
+.scroll {
+    /* 옵션추가 및 레시피 창 스크롤 */
+    overflow-y: auto;
+}
+.gridHeight1 {
+    /* 레시피 창 높이 */
+    max-height: calc(100vh - 180px);
+    min-height: calc(100vh - 180px);
+}
+.gridHeight2 {
+    /* 옵션추가창 높이 */
+    max-height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+}
+.gridHeight3 {
+    /* 옵션관리창 높이 */
+    max-height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
+}
+
+.gridHeightForm {
+    /* 옵션관리 스크롤 본문 길이 */
+    max-height: calc(100vh - 400px);
+    min-height: calc(100vh - 400px);
+    overflow-x: hidden;
+}
+
+.gridHeightForm2 {
+    /* 옵션가져오기 스크롤 본문 길이 */
+    max-height: calc(100vh - 215px);
+    min-height: calc(100vh - 215px);
+    overflow-x: hidden;
+}
+
+/* 기본 입력사항 체크박스 색상 */
+.ui.toggle.checkbox input:checked~.coloring.positive:before,
+.ui.radio.checkbox input:checked~.coloring.positive::after {
+    background: #21ba45 !important;
+}
+
+/* 제목 흰색 */
+.white {
+    color: white !important;
+    cursor: default !important;
+}
+
+.floatRight {
+    float: right;
+}
+
+/* 체크박스 체크 안되어 있을때 색상 */
+.dis {
+    color: #00000030 !important;
+}
+
+.imgZone>.column.relative,
+.imgZone>.ui.grid.four.column,
+.imgZone>.ui.grid.column .row .column {
+    padding: 5px !important;
+}
+.imgZone>.ui.grid.column .row,
+.optionDis>.row,
+.noPadding {
+    padding:  0px !important;
+}
+.fileZone>button {
+    margin-bottom: 0px !important;
+}
+
+/* 옵션가져오기 세로줄 */
+.borderRight {
+    border-right: 1px solid rgba(34,36,38,.15);
+}
+
+/* 드레그 */
+.dragging {
+    opacity: 0;
+}
+/* 드래그 사진 크기 */
+.draggable {
+    height: 117px !important;
+}
+.draggable img , .draggable video {
+    width: 100% !important;
+    height: 100%  !important;
+    border: 1px solid rgba(34,36,38,.15);
+    background-color: rgba(34,36,38,.15) !important;
+}
+.mainfile {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+.flags {
+    width: 20px;
+    height: 20px;
+}
